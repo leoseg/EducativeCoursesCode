@@ -1,5 +1,8 @@
 package Routing;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +10,7 @@ public class RIPPacket {
 
     //convert Functions in java but with camelcase naming like RIPEntries
 
+    @Setter@Getter
     private List<RIPEntry> RIPEntries;
 
     RIPPacket(List<RIPEntry> RIPEntries){

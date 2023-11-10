@@ -6,7 +6,7 @@ import lombok.Setter;
 
 public class RIPEntry {
 
-    @Setter@Generated
+    @Setter@Getter
     private String portIP;
     @Setter@Getter
     private int cost;

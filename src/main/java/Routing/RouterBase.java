@@ -5,9 +5,9 @@ import java.util.List;
 
 public class RouterBase {
 
-    private String IPAddress;
-    private List<RIPEntry> RIPEntries;
-    private ArrayList<Port> ports;
+    protected String IPAddress;
+    protected List<RIPEntry> RIPEntries;
+    protected ArrayList<Port> ports;
 
     RouterBase(String IPAddress, List<RIPEntry> RIPEntries, ArrayList<Port> ports) {
         this.IPAddress = IPAddress;
@@ -35,11 +35,12 @@ public class RouterBase {
                 equals(destinationIPToFind)).forEach(entry -> entry.setCost(newCost));
     }
 
+
     void deleteRIPEntry(String destinationIPToFind){
         this.RIPEntries.removeIf(entry -> entry.getDestIPAddress().equals(destinationIPToFind));
     }
 
-    void printRouter(){
+    public void printRouter(){
         System.out.println("~~~~ Router IP address = " + this.IPAddress + "~~~~");
         System.out.println("---Ports---");
         System.out.println("Port IP | Destination Router IP | Destination Port IP | Cost");

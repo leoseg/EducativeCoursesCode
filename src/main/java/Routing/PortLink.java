@@ -5,12 +5,14 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 
+
+@Getter@Setter
 public class PortLink {
-    @Setter@Getter
+
     private String destPortIP;
-    @Setter@Getter
+
     private String destIPAddress;
-    @Setter@Getter
+
     private int cost;
 
     PortLink(String destIPAddress,String destPortIP, int cost){

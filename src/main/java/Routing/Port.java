@@ -9,8 +9,6 @@ public class Port {
     private final String PortIP;
 
 
-    //Translate  to java with camelcase naming
-
     Port(String PortIP, PortLink link){
         this.PortIP = PortIP;
         this.link = link;
