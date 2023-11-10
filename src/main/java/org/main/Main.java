@@ -1,7 +1,7 @@
 package org.main;
 
-import network.UDPClient;
-import network.UDPServer;
+import UDP_TCP.UDPClient;
+import UDP_TCP.UDPServer;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package network;
+package UDP_TCP;
 
 import java.io.IOException;
 import java.net.*;
