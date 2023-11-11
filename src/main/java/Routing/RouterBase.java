@@ -35,6 +35,11 @@ public class RouterBase {
                 equals(destinationIPToFind)).forEach(entry -> entry.setCost(newCost));
     }
 
+    void setRIPEntryHop(String destinationIPToFind, String newHop){
+        this.RIPEntries.stream().filter(entry -> entry.getDestIPAddress().
+                equals(destinationIPToFind)).forEach(entry -> entry.setNextHopIP(newHop));
+    }
+
 
     void deleteRIPEntry(String destinationIPToFind){
         this.RIPEntries.removeIf(entry -> entry.getDestIPAddress().equals(destinationIPToFind));

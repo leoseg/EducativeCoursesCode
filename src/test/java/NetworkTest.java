@@ -43,16 +43,14 @@ public class NetworkTest {
 
     @Test
     void distVectorAlgoRithmShouldConverge(){
-        AtomicReference<Boolean> converged = new AtomicReference<>(false);
-        while(!converged.get()){
-            converged.set(true);
-            routers.forEach(
-                    router -> {
-                        if(router.sendRIPPackets(routers)!=null){
-                            converged.set(false);
-                        }
-                    }
-            );
+        boolean converged = false;
+        while(!converged){
+            converged = true;
+            for(Router router : routers){
+                if(router.sendRIPPackets(routers)!=null){
+                    converged = false;
+                }
+            }
         }
         routers.forEach(Router::printRouter);
     }
