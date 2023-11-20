@@ -1,11 +1,10 @@
-package Routing;
+package Network.Routing;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Node {
 

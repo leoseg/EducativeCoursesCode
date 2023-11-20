@@ -1,4 +1,4 @@
-package Routing;
+package Network.Routing;
 
 import lombok.Getter;
 

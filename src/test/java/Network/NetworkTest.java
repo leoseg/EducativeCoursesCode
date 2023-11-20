@@ -1,13 +1,14 @@
-import Routing.Router;
+package Network;
+
+import Network.Routing.Router;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicReference;
 
-import static Routing.RoutingUtils.topologyToRouters;
+import static Network.Routing.RoutingUtils.topologyToRouters;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class NetworkTest {

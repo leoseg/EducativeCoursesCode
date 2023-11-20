@@ -1,4 +1,4 @@
-package UDP_TCP;
+package Network.UDP_TCP;
 
 import java.io.BufferedReader;
 import java.io.IOException;

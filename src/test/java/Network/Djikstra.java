@@ -1,4 +1,6 @@
-import Routing.Node;
+package Network;
+
+import Network.Routing.Node;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -33,7 +35,7 @@ public class Djikstra {
         nodes.add(C);
         nodes.add(D);
         nodes.add(E);
-        Routing.Djikstra djikstra = new Routing.Djikstra(nodes, A);
+        Network.Routing.Djikstra djikstra = new Network.Routing.Djikstra(nodes, A);
         ArrayList<Node> path = djikstra.findShortestPath(E);
         assert(E.getDistanceToInitialNode() == 10);
         assert(path.get(1) == B);
